@@ -672,6 +672,14 @@ if (counter === 30) {
   console.log(counter); // 31
 }
 console.log(counter); // 30 (because if block variable won't exist here)
+ 
+same thing with var
+var counter = 30;
+if (counter === 30) {
+  var counter = 31;
+  console.log(counter); // 31
+}
+console.log(counter);  //31
 ```
 
 **[⬆ Back to Top](#table-of-contents)**

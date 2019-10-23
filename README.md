@@ -680,6 +680,23 @@ if (counter === 30) {
   console.log(counter); // 31
 }
 console.log(counter);  //31
+
+diff b/w var & let
+
+{
+	var x= 10;
+ console.log(x) //10
+}
+console.log(x) //10
+
+{
+	let y= 10;
+ console.log(y) //10
+}
+console.log(y) //ReferenceError: y is not defined
+
+
+
 ```
 
 **[⬆ Back to Top](#table-of-contents)**

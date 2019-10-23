@@ -830,6 +830,33 @@ function userDetails(username) {
     const addition = memoizAddition();
     console.log(addition(20)); //output: 40 calculated
     console.log(addition(20)); //output: 40 cached
+
+
+	let map = new Map();
+	const memo = (value) => {
+	    if (!map.has(value)) {
+		console.log('from cal');
+		map.set(value, value);
+		return map.get(value);
+	    } else {
+		console.log('from cache');
+		return map.get(value);
+	    }
+
+	};
+	
+	let cache ={}
+	function xyz(x){
+	if(!cache[x]){
+		let res= x+10
+		cache[x]= res;
+		console.log('from res')
+		return res;		
+	} else {
+		console.log('from cache');
+		return cache[x];		
+	}
+}
     ```
 
     **[⬆ Back to Top](#table-of-contents)**

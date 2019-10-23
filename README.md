@@ -1027,20 +1027,21 @@ function userDetails(username) {
 42. ### What is the main difference between localStorage and sessionStorage?
     LocalStorage is same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
     
-    Feature				Cookies			localStorage			sessionStorage
-Maximum data size – 			   4 kB			   5 MB				      5 MB
-Blockable by users – 			    yes			    yes				      yes
-Auto-expire option –  			    yes			     no				      yes
-Supported data types – 		 	string only		string only			   string only
-Browser support – 			very high		 very high			     very high
-Accessible server-side –		    yes			     no					no
-Data transferred on every HTTP request –    yes			     no					no
-Editable by users – 			    yes			     yes				yes
-Supported on SSL – 			    yes			     n/a				n/a
-Can be accessed on – 			server-side & client-side	client-side only	client-side only
-Clearing / deleting – 		      PHP, JS & automatic	     JS only			JS & automatic
-Lifetime –				as specified	          till deleted			till tab is closed
-Secure data storage – 			     no				no				no
+    |Feature|				|Cookies			|localStorage			|sessionStorage|
+    |---- | --------- | ----- | ----- |
+|Maximum data size –| 			   4 kB	|		   5 MB		|		      5 MB|
+|Blockable by users –| 			    yes	|		    yes		|		      yes|
+|Auto-expire option – | 			    yes	|		     no		|		      yes|
+|Supported data types – |		 	string only|		string only	|		   string only|
+|Browser support –| 		very high|		 very high	|		     very high|
+|Accessible server-side –|		    yes	|		     no		|			no|
+|Data transferred on every HTTP request –|    yes|			     no		|			no|
+|Editable by users – |			    yes	|		     yes		|		yes|
+|Supported on SSL – |			    yes	|		     n/a	|			n/a|
+|Can be accessed on – |			server-side & client-side|	client-side only	|client-side only|
+|Clearing / deleting – |		      PHP, JS & automatic|	     JS only		|	JS & automatic|
+|Lifetime –|				as specified	|          till deleted		|	till tab is closed|
+|Secure data storage –| 			     no	|			no	|			no|
  
 
 Digging deeper into web storage & cookies

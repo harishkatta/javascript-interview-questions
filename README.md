@@ -1025,43 +1025,8 @@ function userDetails(username) {
     **[⬆ Back to Top](#table-of-contents)**
 
 42. ### What is the main difference between localStorage and sessionStorage?
-    LocalStorage is same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
-    
-    |Feature|				|Cookies			|localStorage			|sessionStorage|
-    |---- | --------- | ----- | ----- |
-|Maximum data size –| 			   4 kB	|		   5 MB		|		      5 MB|
-|Blockable by users –| 			    yes	|		    yes		|		      yes|
-|Auto-expire option – | 			    yes	|		     no		|		      yes|
-|Supported data types – |		 	string only|		string only	|		   string only|
-|Browser support –| 		very high|		 very high	|		     very high|
-|Accessible server-side –|		    yes	|		     no		|			no|
-|Data transferred on every HTTP request –|    yes|			     no		|			no|
-|Editable by users – |			    yes	|		     yes		|		yes|
-|Supported on SSL – |			    yes	|		     n/a	|			n/a|
-|Can be accessed on – |			server-side & client-side|	client-side only	|client-side only|
-|Clearing / deleting – |		      PHP, JS & automatic|	     JS only		|	JS & automatic|
-|Lifetime –|				as specified	|          till deleted		|	till tab is closed|
-|Secure data storage –| 			     no	|			no	|			no|
- 
-
-Digging deeper into web storage & cookies
-The maximum amount of data you can store locally depends on the browser. There are no guarantees and if you want a safe bet, go below 5 MB, to about 2 MB. Use this handy tool to test the maximum allowed local storage size in your browser.
-
-It’s a common scenario for users to block 3rd party or all cookies. The same rule applies to local storage. There are no guarantees, and your app has to work (or at least not break) in an environment where local storage is not available.
-
-All cookies expire at some point, but people tend to set lifetime to a few years which seems forever in internet time. Local storage on the other hand never expires and is available till the app or user deletes it. Session storage gets purged when tab or window gets closed – no exceptions.
-
-“What do you mean only strings can be saved? I save objects all the time!” JSON enables you to save objects and other data types in the form of a string. The conversion is done on reading and writing without your knowledge. With a sound library for dealing with cookies and local storage, you won’t have to think about data types. However, that doesn’t change the fact that only strings are natively supported.
-
-There’s not a single client-side feature that all browsers support. It’s a sad fact, but still a fact. You can check for specific numbers on Can I Use but as far as cookies and local storage go I’d ignore all browsers that don’t support them. They are marginal and below 1%.
-
-You can’t access localStorage via server-side processing only. You need JS too. When the user requests a page and PHP kicks in (or whatever server-side language you use) to generate it, you won’t have access to any local data, session or permanent. Once the page loads and JS kicks in you can access the local data and do whatever you need – adjust the user interface or utilize AJAX to send local data back to the server. So yes, you can get the local data back to the server but not in the same manner and the same moment as you’d with a cookie. Depending on your requirements this may be a deal-breaker when it comes to switching from cookies to local storage, so, please – plan ahead!
-
-With local storage, no data is transferred between the client and the server (unless there’s code that explicitly does that). It’s great for reducing payload size. Cookies, on the other hand, are transferred as HTTP header field with every request on the set domain. That can’t be changed or selectively turned off.
-
-Users “shouldn’t” access local data and change it directly (outside your app) but nothing is stopping them in doing so. There are numerous debugging tools available for editing locally stored data. So don’t trust local data or assume the user didn’t touch it. Always assume the worse.
-
-While cookies do have a “secure” attribute that you can set, that does not protect the cookie in transit from the application to the browser. So it’s better than nothing but far from secure. Local storage, being a client-side only technology doesn’t know or care if you use HTTP or HTTPS. Security has to come from the way you handle data. Do not store any sensitive data such as credit card numbers or passwords in any form of local storage! Ever!
+    LocalStorage is same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.    
+    https://wpreset.com/localstorage-sessionstorage-cookies-detailed-comparison/
 
     **[⬆ Back to Top](#table-of-contents)**
 

@@ -594,6 +594,9 @@ In Javascript, functions are first class objects. First-class functions means wh
 ```javascript
 const handler = () => console.log ('This is a click handler function');
 document.addEventListener ('click', handler);
+let x = function(){return 'hello'}
+x // ƒ (){return 'hello'}
+x() // 'hello'
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
